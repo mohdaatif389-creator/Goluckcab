@@ -1,0 +1,17 @@
+<input type="text" id="pickup" placeholder="Pickup Location">
+<input type="text" id="drop" placeholder="Drop Location">
+
+<button onclick="sendWhatsApp()">Book on WhatsApp</button>
+
+<script>
+function sendWhatsApp() {
+  var pickup = document.getElementById("pickup").value;
+  var drop = document.getElementById("drop").value;
+
+  var message = "Pickup: " + pickup + "%0A" + "Drop: " + drop;
+
+  var url = "https://wa.me/916392860640?text=" + message;
+
+  window.open(url, '_blank');
+}
+</script>
