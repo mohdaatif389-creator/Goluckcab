@@ -1,0 +1,25 @@
+<input type="text" id="name" placeholder="Your Name"><br><br>
+<input type="text" id="phone" placeholder="Phone Number"><br><br>
+<input type="text" id="pickup" placeholder="Pickup Location"><br><br>
+<input type="text" id="drop" placeholder="Drop Location"><br><br>
+
+<button onclick="sendWhatsApp()">Book Now</button>
+
+<script>
+function sendWhatsApp() {
+  var name = document.getElementById("name").value;
+  var phone = document.getElementById("phone").value;
+  var pickup = document.getElementById("pickup").value;
+  var drop = document.getElementById("drop").value;
+
+  var message = "🚖 Cab Booking Request%0A%0A"
+              + "👤 Name: " + name + "%0A"
+              + "📞 Phone: " + phone + "%0A"
+              + "📍 Pickup: " + pickup + "%0A"
+              + "📍 Drop: " + drop;
+
+  var url = "https://wa.me/916392860640?text=" + message;
+
+  window.open(url, '_blank');
+}
+</script>
